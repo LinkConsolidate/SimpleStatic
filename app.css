@@ -203,6 +203,18 @@ form {
   margin: 10px 0;
 }
 
+h3, h4 {
+  margin: 15px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.sort-button {
+  margin: 5px 0;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     display: block;

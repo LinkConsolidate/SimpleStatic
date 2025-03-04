@@ -1,0 +1,30 @@
+<h1>New</h1>
+
+<section>
+    <p>
+        Fill out the form below to add a new entry to the photo collection.
+    </p>
+    <form id="add-item-form">
+        <!-- Error message will be shown here -->
+        <div id="form-errors"></div>
+
+        <label for="item-name">Name</label>
+        <input type="text" id="item-name" name="item-name">
+
+        <label for="item-category">Category</label>
+        <select id="item-category" name="item-category">
+            <option value="nature">Nature</option>
+            <option value="urban">Urban</option>
+        </select>
+
+        <label for="item-date">Date</label>
+        <input type="date" id="item-date" name="item-date">
+
+        <!-- Dummy placeholder for upload field, this file is not processed. -->
+        <label class="upload-label" for="item-image">Image</label>
+        <label for="item-image" class="custom-file-upload">Upload</label>
+        <input type="file" id="item-image" name="item-image" accept="image/*">
+
+        <button type="button" id="submit-btn" onclick="postForm()">Add Item</button>
+    </form>
+</section>

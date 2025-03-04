@@ -1,3 +1,19 @@
-<p>
-    COLLECTION PAGE
-</p>
+<h1>Collection</h1>
+
+<section class="collection-container">
+    <div id="filter">
+        <label for="category">Filter by category:</label>
+        <select id="category" onchange="refreshItems()">
+            <option value="all">All</option>
+            <option value="nature">Nature</option>
+            <option value="urban">Urban</option>
+        </select>
+    </div>
+    <div id="sort">
+        <button onclick="sortItems('asc')">Sort date ascending</button>
+        <button onclick="sortItems('desc')">Sort date descending</button>
+    </div>
+    <div id="current-pagination"></div>
+    <div id="items-container"></div>
+    <div id="pagination"></div>
+</section>

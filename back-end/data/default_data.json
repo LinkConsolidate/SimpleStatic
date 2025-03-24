@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "Sunset",
+        "category": "nature",
+        "date": "2020-11-28",
+        "image": "sunset.jpg"
+    },
+    {
+        "id": 2,
+        "name": "City Skyline",
+        "category": "urban",
+        "date": "2025-02-14",
+        "image": "city_skyline.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Mountain View",
+        "category": "nature",
+        "date": "2011-08-26",
+        "image": "mountain_view.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Street Art",
+        "category": "urban",
+        "date": "2010-01-28",
+        "image": "street_art.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Beach",
+        "category": "nature",
+        "date": "2025-03-03",
+        "image": "beach.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Bridge",
+        "category": "urban",
+        "date": "2014-04-16",
+        "image": "bridge.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Forest",
+        "category": "nature",
+        "date": "2015-12-12",
+        "image": "forest.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Skyscraper",
+        "category": "urban",
+        "date": "2021-05-24",
+        "image": "skyscraper.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Waterfall",
+        "category": "nature",
+        "date": "2019-11-30",
+        "image": "waterfall.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Park",
+        "category": "nature",
+        "date": "2016-03-08",
+        "image": "park.jpg"
+    },
+    {
+        "id": 11,
+        "name": "City Lights",
+        "category": "urban",
+        "date": "2010-12-14",
+        "image": "city_lights.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Ocean",
+        "category": "nature",
+        "date": "2024-06-24",
+        "image": "ocean.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Street Market",
+        "category": "urban",
+        "date": "2022-04-05",
+        "image": "street_market.jpg"
+    }
+]

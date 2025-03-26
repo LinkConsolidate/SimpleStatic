@@ -1,4 +1,6 @@
-function postForm() {
+function postForm(event) {
+    console.log(event);
+    event.preventDefault();
     const errorDiv = document.getElementById('form-errors');
     errorDiv.innerHTML = '';
 
@@ -44,8 +46,8 @@ function postForm() {
         image: "default.png"
     };
 
-    addCollectionItem(newItem);
-
     
     document.getElementById('add-item-form').reset();
+
+    addCollectionItem(newItem);
 }

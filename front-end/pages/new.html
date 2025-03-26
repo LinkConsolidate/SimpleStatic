@@ -4,7 +4,7 @@
     <p>
         Fill out the form below to add a new entry to the photo collection.
     </p>
-    <form id="add-item-form">
+    <form id="add-item-form" onsubmit="postForm(event)">
         <!-- Error message will be shown here -->
         <div id="form-errors"></div>
 
@@ -20,6 +20,6 @@
         <label for="item-date">Date</label>
         <input type="date" id="item-date" name="item-date">
 
-        <button type="button" id="submit-btn" onclick="postForm()">Add Item</button>
+        <button type="submit" id="submit-btn">Add Item</button>
     </form>
 </section>

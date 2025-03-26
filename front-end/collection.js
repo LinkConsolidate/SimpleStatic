@@ -1,18 +1,4 @@
-const items = [
-    { name: "Sunset", category: "nature", date: "2020-11-28", image: "sunset.jpg" },
-    { name: "City Skyline", category: "urban", date: "2025-02-14", image: "city_skyline.jpg" },
-    { name: "Mountain View", category: "nature", date: "2011-08-26", image: "mountain_view.jpg" },
-    { name: "Street Art", category: "urban", date: "2010-01-28", image: "street_art.jpg" },
-    { name: "Beach", category: "nature", date: "2025-03-03", image: "beach.jpg" },
-    { name: "Bridge", category: "urban", date: "2014-04-16", image: "bridge.jpg" },
-    { name: "Forest", category: "nature", date: "2015-12-12", image: "forest.jpg" },
-    { name: "Skyscraper", category: "urban", date: "2021-05-24", image: "skyscraper.jpg" },
-    { name: "Waterfall", category: "nature", date: "2019-11-30", image: "waterfall.jpg" },
-    { name: "Park", category: "nature", date: "2016-03-08", image: "park.jpg" },
-    { name: "City Lights", category: "urban", date: "2010-12-14", image: "city_lights.jpg" },
-    { name: "Ocean", category: "nature", date: "2024-06-24", image: "ocean.jpg" },
-    { name: "Street Market", category: "urban", date: "2022-04-05", image: "street_market.jpg" }
-];
+let items = [];
 
 /**
  * Constant value to change the items shown per page
@@ -96,9 +82,18 @@ function goToPage(page) {
  * collection items are reset and is set to the first page
  */
 function refreshItems() {
-    filteredItems = [...items];
-    currentPage = 1;
-    updatePage();
+    fetch('http://localhost:3000/collection')
+      .then(response => response.json())
+      .then(data => {
+        // Log for the demo
+        console.log(data);
+
+        items = data;
+        filteredItems = [...items];
+        currentPage = 1;
+        updatePage();
+      })
+      .catch(error => console.error('Error fetching collection:', error));
 }
 
 /**
@@ -154,6 +149,18 @@ function formatDate(dateObj) {
  * @param {T} item 
  */
 function addCollectionItem(item) {
-    items.push(item);
-    loadContent("collection");
+    fetch('http://localhost:3000/collection/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Log for the demo
+        console.log(data);
+        loadContent("collection");
+    })
+    .catch(error => console.error('Error fetching collection:', error));    
 }
